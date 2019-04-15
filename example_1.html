@@ -17,12 +17,12 @@
 	.background{
 		width: 100%;
 		height: 100%;
-		background-image: url('portfolio.jpg');
+		background-image: url('mk.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
 		overflow: auto;
-		opacity: 0.6;
+		opacity: 0.7;
 	}
 	.nav{
 		width: 350px;
@@ -96,11 +96,81 @@
 		color: white;
 		font-family: century gothic;
 		padding: 0px 60px;
+		display: none;
 	}
 	.aboutus p{
 		font-size: 19px;
 		line-height: 30px;
 		margin-bottom: 350px;
+	}
+	.galary{
+     position: absolute;
+     padding: 0px 305px;
+     right:0;
+     margin-left: 150px;
+     top: -62px;
+     color: white;
+     display: none;
+	}
+	.galary .image img{
+		width: 20%;
+		margin: 2%;
+		float: left;
+	}
+	.image img{
+		width: 100%;
+		transition:  all ease 0.5s;
+		-webkit-transform: all ease 0.5s;
+		transition: scale(1);
+		-webkit-transform: scale(1);
+	}
+	.image img:hover{
+		transform: scale(1.2);
+
+	}
+	.contactus{
+		position: absolute;
+		right: 0;
+		top: 160px;
+		color: white;
+		padding: 0px 60px;
+		margin-right: 150px;
+		display: none;
+	}
+	.inputtext{
+		width: 65%;
+		height: 65px;
+		border: 2px solid #000;
+		color: #fff;
+		background-color: rgba(0,0,0,0.7);
+		font-size: 20px;
+		padding: 0 10px;
+		float: left;
+		margin-bottom: 15px;
+	}
+	.inputmessage{
+		width: 65%;
+		height: 165px;
+		border: 2px solid #000;
+		color: #fff;
+		background-color: rgba(0,0,0,0.7);
+		font-size: 20px;
+		padding: 0 10px;
+		float: left;
+	}
+	.submit{
+		width: 160px;
+		height: 65px;
+		border: none;
+		color: #000;
+		font-family: arial;
+		background-color: #fff;
+		font-size: 28px;
+		padding: 0 10px;
+		float: left;
+		font-weight: bold;
+		clear: both;
+		margin-top: 25px;
 	}
 </style>
 <body>
@@ -114,15 +184,46 @@
   
   <div class="content">
   	<div class="home">
-  		<h1>Text</h1>
+  		<h1>Mk</h1>
   		<h3>Web Designer</h3>
   	</div>
 
   	<div class="aboutus">
-  		<h1 style="color: #000;">Lorem Ipsum</h1><br>
+  		<h1>About Me</h1><br>
   		<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
   		 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
   		It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  	</div>
+  </div>
+
+  <div class="galary">
+  	<center><h1 style="margin-top: 120px;font-size:50px;">Worked on the following Technologies</h1></center>
+  	<div class="image">
+  	<img src="/Users/abc/backup/manju/portfolio/images/android.jpeg">	
+  	<img src="/Users/abc/backup/manju/portfolio/images/bootstrap.jpeg">
+  	<img src="/Users/abc/backup/manju/portfolio/images/ps.jpg">
+  	<img src="/Users/abc/backup/manju/portfolio/images/javascript.png">
+  	<img src="/Users/abc/backup/manju/portfolio/images/jquery.png">
+  	<img src="/Users/abc/backup/manju/portfolio/images/angular.jpeg">
+  	<img src="/Users/abc/backup/manju/portfolio/images/javascript.png">
+  	<img src="/Users/abc/backup/manju/portfolio/images/android.jpeg">
+  	<img src="/Users/abc/backup/manju/portfolio/images/ps.jpg">
+  	<img src="/Users/abc/backup/manju/portfolio/images/bootstrap.jpeg">
+  	<img src="/Users/abc/backup/manju/portfolio/images/angular.jpeg">
+  	<img src="/Users/abc/backup/manju/portfolio/images/jquery.png">
+  	</div>
+  </div>
+
+  <div class="contactus">
+  	<div class="contactform">
+  		<h1 style="font-size:40px;margin-left:150px;">Contact Me!</h1><br>
+  	  <form action="example_1.html method="post"> 
+  	  	<input type="text" name="" class="inputtext" placeholder="First Name">
+  	  	<input type="text" name="" class="inputtext" placeholder="Last Name">
+  	  	<input type="text" name="" class="inputtext" placeholder="Your Email">
+  	  	<textarea cols="4" rows="6" class="inputmessage" placeholder="Your messages.....!!"></textarea>
+  	  	<input type="button" name="" class="submit" value="submit">
+  	  </form>
   	</div>
   </div>
 	
@@ -131,12 +232,35 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('a').click(function(){
-			// alert('I am click');
-			var selected = $(this);
-			('a').removeClass('active');
-			$(selected).addClass('active');
-		});
+	
+	    $(".a").click(function(){
+        $(".home").fadeIn();
+        $(".aboutus").fadeOut();
+        $(".galary").fadeOut();
+        $(".contactus").fadeOut();
+	    });
+
+	    $(".b").click(function(){
+	    $(".aboutus").fadeIn();
+        $(".home").fadeOut();
+        $(".galary").fadeOut();
+        $(".contactus").fadeOut();
+	    });
+
+	    $(".c").click(function(){
+	    $(".galary").fadeIn();	
+        $(".home").fadeOut();
+        $(".aboutus").fadeOut();
+        $(".contactus").fadeOut();
+	    });
+
+	    $(".d").click(function(){
+	    $(".contactus").fadeIn();
+	    $(".galary").fadeOut();	
+        $(".home").fadeOut();
+        $(".aboutus").fadeOut();
+	    });
+
 	});
 </script>
 
