@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+</head>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	html, body{
+		width: 100%;
+		height: 100%;
+		font-size: 15px;
+		font-weight: normal;
+	}
+	.background{
+		width: 100%;
+		height: 100%;
+		background-image: url('portfolio.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		overflow: auto;
+		opacity: 0.6;
+	}
+	.nav{
+		width: 350px;
+		height: auto;
+		position: absolute;
+		top: 20%;
+		left: 0px;
+	}
+	.nav a{
+		text-decoration: none;
+		font-size: 28px;
+		font-family: verdana;
+		font-weight: bold;
+		height: 90px;
+		margin: 5px 0px;
+		float: left;
+		background-color: black;
+		color: white;
+		line-height: 90px;
+		text-align: center;
+		display: inline-block;
+		transition: 300ms;	
+	}
+	
+	 .nav a:hover{
+		background-color: white;
+		color: black;
+		width: 100%;
+	}
+	.a{
+		width: 95%;
+	}
+	.b{
+		width: 85%;
+	}
+	.c{
+		width: 80%;
+	}
+	.d{
+		width: 90%;
+	}
+	.content{
+		position: absolute;
+		width: 1000px;
+		min-height: 600px;
+		right: 0;
+		top: 15%;
+	}
+	.home{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		color: white;
+		font-family: verdana;
+		
+	}
+	.home h1{
+		font-size: 100px;
+		padding-right: 950px;
+		border-bottom: 1px solid white;
+		text-transform: uppercase;
+	}
+	.home h3{
+		font-size: 28px;
+		padding: 15px 0;
+		opacity: 0.6;
+	}
+	.aboutus{
+		position: absolute;
+		bottom: -50px;
+		color: white;
+		font-family: century gothic;
+		padding: 0px 60px;
+	}
+	.aboutus p{
+		font-size: 19px;
+		line-height: 30px;
+		margin-bottom: 350px;
+	}
+</style>
+<body>
+<div class="background">
+  <div class="nav">
+  	<a class="a active" href="#">HOME</a>
+  	<a class="b" href="#">ABOUT ME</a>
+  	<a class="c" href="#">MY PROJECTS</a>
+  	<a class="d" href="#">CONTACT</a>
+  </div>
+  
+  <div class="content">
+  	<div class="home">
+  		<h1>Text</h1>
+  		<h3>Web Designer</h3>
+  	</div>
+
+  	<div class="aboutus">
+  		<h1 style="color: #000;">Lorem Ipsum</h1><br>
+  		<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
+  		 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
+  		It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  	</div>
+  </div>
+	
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('a').click(function(){
+			// alert('I am click');
+			var selected = $(this);
+			('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+	});
+</script>
+
+
+</body>
+</html>
